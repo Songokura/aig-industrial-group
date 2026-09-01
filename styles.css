@@ -463,6 +463,18 @@ body.menu-open .m-menu { display: flex; opacity: 1; }
 }
 .asu-svg { width: 88%; height: auto; }
 
+/* широкая карточка направления: занимает 2 колонки, раскладка горизонтальная */
+.card-wide { grid-column: span 2; flex-direction: row; }
+.card-wide .card-img { flex: 0 0 46%; aspect-ratio: auto; }
+.card-wide .card-body { padding: 30px 34px 32px; justify-content: center; }
+.card-wide .card-cta { margin-top: 4px; }
+.card-wide .card-body h4 { font-size: 24px; margin-bottom: 16px; }
+.card-wide .card-body ul { gap: 9px; margin-bottom: 22px; }
+.card-wide .card-body li { font-size: 15px; }
+.card-wide .card-img::after { inset: auto 0 0 0; }
+.card-wide .asu-svg { width: 96%; }
+
+
 /* ---------- проекты ---------- */
 .projects {
   display: grid;
@@ -808,7 +820,16 @@ body.menu-open .m-menu { display: flex; opacity: 1; }
 
 /* ---------- адаптив ---------- */
 @media (max-width: 1180px) {
+  /* 8 карточек в две колонки - ровно 4 ряда, широкая возвращается к обычной */
   .cards { grid-template-columns: repeat(2, 1fr); }
+  .card-wide { grid-column: auto; flex-direction: column; }
+  .card-wide .card-img { flex: none; aspect-ratio: 16 / 10; }
+  .card-wide .card-body { padding: 22px 24px 24px; justify-content: flex-start; }
+  .card-wide .card-body h4 { font-size: 19px; margin-bottom: 12px; }
+  .card-wide .card-body li { font-size: 14px; }
+  .card-wide .card-cta { margin-top: auto; }
+  /* группа из трёх остаётся в три колонки, иначе третья карточка висит одна */
+  .cards-3 { grid-template-columns: repeat(3, 1fr); gap: 20px; }
 }
 
 /* порог бургера и оверлея - ОДНО число: 1080 */
@@ -828,8 +849,12 @@ body.menu-open .m-menu { display: flex; opacity: 1; }
   .path-step { padding: 0 0 30px 76px; }
   .path-step:last-child { padding-bottom: 0; }
   .ps-num { left: 0; top: -4px; background: var(--paper); padding: 4px 0; font-size: 32px; line-height: 44px; width: 52px; text-align: center; }
+  .cards-3 { grid-template-columns: 1fr; gap: 26px; }
+  /* в две колонки широким остаётся только первый кейс: 2 + 6 = 4 полных ряда */
   .projects { grid-template-columns: 1fr 1fr; }
   .proj-wide { grid-column: span 2; }
+  .proj-wide-b { grid-column: auto; }
+  .proj-wide-b .proj-img { aspect-ratio: 16 / 10; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .base { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
@@ -850,6 +875,7 @@ body.menu-open .m-menu { display: flex; opacity: 1; }
   .projects { grid-template-columns: 1fr; }
   .proj-wide { grid-column: auto; }
   .proj-wide .proj-img { aspect-ratio: 16 / 10; }
+  .card-wide { grid-column: auto; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .corp-band { padding: 22px; }
   .sticky-bar { display: grid; }
