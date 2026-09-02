@@ -167,13 +167,16 @@ h2 { font-size: clamp(30px, 4.6vw, 52px); margin-bottom: 18px; }
 .hdr-site {
   font-family: var(--mono);
   font-size: 13px;
-  color: var(--gold);
-  border: 1px solid var(--green-line);
+  font-weight: 500;
+  color: var(--gold-light);
+  background: rgba(11, 29, 20, .72);
+  border: 1px solid rgba(224, 195, 132, .55);
   border-radius: 8px;
   padding: 8px 14px;
-  transition: border-color .25s, background .25s;
+  backdrop-filter: blur(4px);
+  transition: border-color .25s, background .25s, color .25s;
 }
-.hdr-site:hover { border-color: var(--gold); background: rgba(200, 165, 92, .1); }
+.hdr-site:hover { border-color: var(--gold-light); background: var(--gold-light); color: var(--green-950); }
 .hdr-phone { color: #f4f1ea; font-weight: 600; font-size: 16px; white-space: nowrap; }
 .hdr-phone:hover { color: var(--gold-light); }
 
