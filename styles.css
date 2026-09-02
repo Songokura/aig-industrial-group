@@ -267,7 +267,6 @@ body.menu-open .m-menu { display: flex; opacity: 1; }
   padding: calc(var(--hdr-h) + 40px) 24px 0;
 }
 .hero-kicker { color: var(--gold); margin-bottom: 22px; }
-.chev { width: 16px; height: 12px; flex: none; background: var(--orange); clip-path: polygon(0 100%, 50% 0, 100% 100%, 78% 100%, 50% 34%, 22% 100%); }
 .hero-title { display: flex; flex-direction: column; gap: 8px; }
 .ht-big {
   font-size: clamp(23px, 6.6vw, 92px);
@@ -438,10 +437,9 @@ body.menu-open .m-menu { display: flex; opacity: 1; }
 .card-body li::before {
   content: "";
   position: absolute;
-  left: 0; top: 7px;
-  width: 9px; height: 7px;
+  left: 0; top: 11px;
+  width: 10px; height: 2px;
   background: var(--gold);
-  clip-path: polygon(0 100%, 50% 0, 100% 100%, 72% 100%, 50% 40%, 28% 100%);
 }
 .card-cta {
   margin-top: auto;
@@ -593,10 +591,9 @@ body.menu-open .m-menu { display: flex; opacity: 1; }
 .base-points li::before {
   content: "";
   position: absolute;
-  left: 0; top: 8px;
-  width: 11px; height: 8px;
+  left: 0; top: 12px;
+  width: 12px; height: 2px;
   background: var(--orange);
-  clip-path: polygon(0 100%, 50% 0, 100% 100%, 72% 100%, 50% 40%, 28% 100%);
 }
 
 /* бегущая строка заказчиков */
@@ -619,11 +616,11 @@ body.menu-open .m-menu { display: flex; opacity: 1; }
 .marquee-track span::after {
   content: "";
   position: absolute;
-  right: -6px; top: 50%;
-  width: 12px; height: 9px;
+  right: -5px; top: 50%;
+  width: 5px; height: 5px;
+  border-radius: 50%;
   transform: translateY(-50%);
   background: var(--gold);
-  clip-path: polygon(0 100%, 50% 0, 100% 100%, 72% 100%, 50% 40%, 28% 100%);
 }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
