@@ -123,10 +123,9 @@ h2 { font-size: clamp(30px, 4.6vw, 52px); margin-bottom: 18px; }
   align-items: center;
   gap: 28px;
 }
-.logo { display: flex; align-items: center; gap: 11px; position: relative; z-index: 72; }
-.logo-mark { width: 34px; height: 34px; flex: none; }
+.logo { display: flex; align-items: center; position: relative; z-index: 72; }
 .logo-text {
-  color: #f4f1ea;
+  color: var(--gold);
   font-weight: 800;
   font-size: 22px;
   letter-spacing: .04em;
@@ -141,7 +140,7 @@ h2 { font-size: clamp(30px, 4.6vw, 52px); margin-bottom: 18px; }
   font-size: 9px;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: rgba(200, 165, 92, .66);
 }
 .nav { display: flex; gap: 26px; margin-left: 12px; }
 .nav a {
