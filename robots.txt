@@ -1,4 +1,2 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://lp.aig-su.kz/sitemap.xml
